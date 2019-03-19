@@ -1,7 +1,20 @@
+// Media query
 .responsive(@maxWidth; @rules) {
     @media only screen and (max-width: @maxWidth) {
         @rules();
     }
+}
+
+.bordered(@size: 1px; @type: solid; @color: var(--color-text)) {
+    border: @size @type @color;
+}
+
+.transitioned(@props: all; @time: .3s; @easing: ease-in-out) {
+    transition: @props @time @easing;
+}
+
+.rounded(@radius: 5px) {
+    border-radius: @radius;
 }
 
 /**
