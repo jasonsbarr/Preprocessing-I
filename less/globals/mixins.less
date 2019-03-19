@@ -3,3 +3,17 @@
         @rules();
     }
 }
+
+/**
+ * Font Awesome classes
+ */
+.icon {
+    .fa-icon;
+    .far;
+
+    &.contact {
+        &::before {
+            content: @fa-var-envelope;
+        }
+    }
+}
