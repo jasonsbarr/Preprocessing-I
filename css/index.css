@@ -4519,17 +4519,17 @@ button:hover {
   justify-content: space-evenly;
 }
 .hero::before {
+  background-color: var(--color-dark);
   background-image: url('../images/jason-barr-playing-saxophone.jpg');
-  background-position: 100% 0;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: cover;
   content: "";
   filter: grayscale(100%);
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
+  width: 50%;
   z-index: -1;
 }
 .hero h1,
