@@ -130,7 +130,6 @@ table {
 /* Set every element's box-sizing to border-box */
 :root {
   box-sizing: border-box;
-  font-size: 100%;
 }
 *,
 ::after,
@@ -140,8 +139,27 @@ table {
 html,
 body {
   height: 100%;
-  min-height: 100%;
+  min-height: 100vh;
 }
-body {
+html {
   font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.2;
+}
+p {
+  line-height: 1.4;
+}
+:root {
+  --color-primary: #cd0000;
+  --color-primary-light: #f81818;
+  --color-primary-dark: #7e0000;
+  --color-secondary: #007b7b;
+  --color-secondary-light: #2f9a9a;
+  --color-secondary-dark: #003434;
+  --color-success: #00a400;
+  --color-info: #2f9a9a;
+  --color-warning: #cd5d00;
+  --color-danger: #cd0000;
+  --color-light: #fcfcfc;
+  --color-dark: #080a0a;
 }

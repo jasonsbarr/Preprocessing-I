@@ -1,7 +1,6 @@
 /* Set every element's box-sizing to border-box */
 :root {
     box-sizing: border-box;
-    font-size: 100%;
 }
 
 *,
@@ -13,9 +12,15 @@
 html,
 body {
     height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
-body {
+html {
     font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.4;
 }
