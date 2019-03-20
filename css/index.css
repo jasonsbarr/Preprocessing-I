@@ -4734,6 +4734,7 @@ button:hover {
 }
 .header {
   align-items: center;
+  background-color: rgba(252, 252, 252, 0.9);
   display: flex;
   justify-content: space-between;
 }
