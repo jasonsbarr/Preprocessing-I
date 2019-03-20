@@ -4573,6 +4573,11 @@ button:hover {
     width: 100%;
   }
 }
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
 /**
  * Layouts
  */
@@ -4687,13 +4692,29 @@ button:hover {
   font-family: 'Overpass', sans-serif;
   font-size: 1.1em;
   font-weight: 600;
+  overflow: hidden;
   padding: 0.5em 1.5em;
+  position: relative;
 }
 .hero-button:hover {
-  background-color: rgba(252, 252, 252, 0.8);
+  background-color: var(--color-light);
   color: var(--color-dark);
   cursor: pointer;
   transform: scale(1.05);
+}
+.hero-button:hover::after,
+.hero-button:hover .hero-button:focus::after {
+  animation: sheen 1s forwards;
+}
+.hero-button::after {
+  background: linear-gradient(to bottom, #fcfcfc, rgba(252, 252, 252, 0.5) 50%, #fcfcfc);
+  bottom: -50%;
+  content: "";
+  left: -50%;
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
 }
 .hero-button .icon {
   font-size: 1.5em;

@@ -86,13 +86,37 @@
         font-family: 'Overpass', sans-serif;
         font-size: 1.1em;
         font-weight: 600;
+        overflow: hidden;
         padding: .5em 1.5em;
+        position: relative;
 
         &:hover {
-            background-color: fade(@white, 80%);
+            background-color: var(--color-light);
             color: var(--color-dark);
             cursor: pointer;
             transform: scale(1.05);
+
+            &::after,
+            .hero-button:focus::after {
+                animation: sheen 1s forwards;
+            }
+        }
+
+        &::after {
+            background: linear-gradient(
+                            to bottom,
+                            @white,
+                            fade(@white, 50%) 50%,
+                            @white);
+            bottom: -50%;
+            content: "";
+            left: -50%;
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            transform: 
+                    rotateZ(60deg)
+                    translate(-5em, 7.5em);
         }
 
         & .icon {
