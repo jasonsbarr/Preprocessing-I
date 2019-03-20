@@ -4722,14 +4722,8 @@ button:hover {
   margin-top: -0.75rem;
 }
 .header .logo-text {
-  animation: typing 3.5s steps(24, end), blink 1s 3.5s step-end infinite;
-  border-right: 5px solid #080a0a;
   font-family: 'Overpass', sans-serif;
   font-size: 2.5rem;
-  overflow: hidden;
-  padding-right: 0.1em;
-  position: relative;
-  white-space: nowrap;
 }
 .header .logo-text::before {
   content: ">";
@@ -4757,6 +4751,13 @@ button:hover {
   .header .nav-list {
     justify-content: center;
   }
+}
+.header .nav-item {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.header .nav-item:hover {
+  background-color: rgba(248, 24, 24, 0.15);
 }
 .header .nav-item + .nav-item {
   margin-left: 2.5em;
@@ -4793,4 +4794,13 @@ button:hover {
 }
 .about > div + div {
   margin-left: 1.5rem;
+}
+.about-heading {
+  margin-bottom: 0.5em;
+}
+.about-content + .about-content {
+  margin-top: 0.5em;
+}
+.about .skills-heading {
+  font-size: 1.6em;
 }

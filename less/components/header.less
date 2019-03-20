@@ -30,16 +30,16 @@
         }
 
         &-text {
-            animation: 
-                    typing 3.5s steps(24, end),
-                    blink 1s 3.5s step-end infinite;
-            border-right: 5px solid @black;
+            // animation: 
+            //         typing 3.5s steps(24, end),
+            //         blink 1s 3.5s step-end infinite;
+            // border-right: 5px solid @black;
             font-family: @overp;
             font-size: 2.5rem;
-            overflow: hidden;
-            padding-right: 0.1em;
-            position: relative;
-            white-space: nowrap;
+            // overflow: hidden;
+            // padding-right: 0.1em;
+            // position: relative;
+            // white-space: nowrap;
 
             &::before {
                     content: ">";
@@ -69,6 +69,15 @@
             .responsive-max(@mobile, {
                 justify-content: center;
             });
+        }
+
+        &-item {
+            .rounded();
+            .transitioned();
+
+            &:hover {
+                background-color: fade(@red-light, 15%);
+            }
         }
 
         &-item + .nav-item {
