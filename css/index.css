@@ -4586,7 +4586,7 @@ button:hover {
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 37.5em) {
   .hero {
     font-size: 1rem;
     justify-content: center;
@@ -4639,7 +4639,7 @@ button:hover {
     background: rgba(158, 158, 158, 0.25);
   }
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 37.5em) {
   .hero-content {
     width: 85%;
   }
@@ -4666,8 +4666,17 @@ button:hover {
 }
 .header {
   align-items: center;
+  border-bottom: 1px solid var(--color-text);
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1em;
+}
+@media only screen and (max-width: 64em) {
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .header .logo,
 .header .logo-img {
@@ -4679,6 +4688,11 @@ button:hover {
   justify-content: center;
   line-height: 60px;
   min-width: 360px;
+}
+@media only screen and (max-width: 64em) {
+  .header .logo {
+    margin-bottom: 0.5em;
+  }
 }
 .header .logo-img {
   margin-top: -0.75rem;
@@ -4704,11 +4718,21 @@ button:hover {
   display: flex;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 37.5em) {
+  .header .nav {
+    justify-content: center;
+  }
+}
 .header .nav-list {
   align-items: center;
   display: flex;
   justify-content: flex-end;
   width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .nav-list {
+    justify-content: center;
+  }
 }
 .header .nav-item {
   border-radius: 5px;
@@ -4720,13 +4744,28 @@ button:hover {
 .header .nav-item + .nav-item {
   margin-left: 2.5em;
 }
+@media only screen and (max-width: 37.5em) {
+  .header .nav-item + .nav-item {
+    margin-left: 0;
+  }
+}
 .header .nav-link {
   border-radius: 5px;
   color: var(--color-text);
   display: block;
   padding: 0.5em 1em;
 }
+@media only screen and (max-width: 37.5em) {
+  .header .nav-link {
+    padding: 0.5em;
+  }
+}
 .header .nav-link:hover {
   border: none;
   color: #080a0a;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .nav-link .icon {
+    display: none;
+  }
 }

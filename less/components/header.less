@@ -1,7 +1,15 @@
 .header {
     align-items: center;
+    border-bottom: 1px solid var(--color-text);
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1em;
+
+    .responsive-max(@desktop, {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    });
 
     .logo,
     .logo-img {
@@ -14,6 +22,10 @@
         justify-content: center;
         line-height: 60px;
         min-width: 360px;
+
+        .responsive-max(@desktop, {
+            margin-bottom: 0.5em;
+        });
 
         &-img {
             margin-top: -.75rem;
@@ -44,13 +56,20 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
-        // width: 460px;
+
+        .responsive-max(@mobile, {
+            justify-content: center;
+        });
 
         &-list {
             align-items: center;
             display: flex;
             justify-content: flex-end;
             width: 100%;
+
+            .responsive-max(@mobile, {
+                justify-content: center;
+            });
         }
 
         &-item {
@@ -64,6 +83,10 @@
 
         &-item + .nav-item {
             margin-left: 2.5em;
+
+            .responsive-max(@mobile, {
+                margin-left: 0;
+            });
         }
 
         &-link {
@@ -72,9 +95,19 @@
             display: block;
             padding: 0.5em 1em;
 
+            .responsive-max(@mobile, {
+                padding: 0.5em;
+            });
+
             &:hover {
                 border: none;
                 color: @black;
+            }
+
+            .icon {
+                .responsive-max(@mobile, {
+                    display: none;
+                });
             }
         }
     }
