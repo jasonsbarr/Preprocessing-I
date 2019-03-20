@@ -1,0 +1,10 @@
+.about {
+
+    & > div {
+        width: calc(50% - @length-small);
+
+        & + div {
+            margin-left: @length-small;
+        }
+    }
+}

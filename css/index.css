@@ -4416,6 +4416,9 @@ table {
 /**
  * Typography
  */
+/**
+ * Spacing and alignment
+ */
 :root {
   --color-primary: #cd0000;
   --color-primary-light: #f81818;
@@ -4538,6 +4541,9 @@ button:hover {
 .icon.user.icon::before {
   content: "\f007";
 }
+.icon.education.icon::before {
+  content: "\f19d";
+}
 .icon.desktop::before {
   content: "\f108";
 }
@@ -4547,13 +4553,21 @@ button:hover {
 }
 @keyframes blink {
   0% {
-    opacity: 1;
+    border-right-color: #080a0a;
   }
   50% {
-    opacity: 0;
+    border-right-color: transparent;
   }
   100% {
-    opacity: 1;
+    border-right-color: #080a0a;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 /**
@@ -4572,6 +4586,13 @@ button:hover {
 .container section {
   border-bottom: 1px solid var(--color-text);
   padding-bottom: 1em;
+}
+/**
+ * Pages
+ */
+.home-page .container section {
+  display: flex;
+  justify-content: space-between;
 }
 /**
  * Component styles
@@ -4701,20 +4722,20 @@ button:hover {
   margin-top: -0.75rem;
 }
 .header .logo-text {
+  animation: typing 3.5s steps(24, end), blink 1s 3.5s step-end infinite;
+  border-right: 5px solid #080a0a;
   font-family: 'Overpass', sans-serif;
   font-size: 2.5rem;
+  overflow: hidden;
+  padding-right: 0.1em;
+  position: relative;
+  white-space: nowrap;
 }
 .header .logo-text::before {
   content: ">";
   font-family: 'Overpass Mono', monospace;
   font-size: 3rem;
   line-height: normal;
-}
-.header .logo-text::after {
-  animation: blink 1s step-end infinite;
-  content: "|";
-  font-size: 2.5rem;
-  margin-left: 0.5rem;
 }
 .header .nav {
   align-items: center;
@@ -4766,4 +4787,10 @@ button:hover {
   .header .nav-link .icon {
     display: none;
   }
+}
+.about > div {
+  width: calc(50% - 1.5rem);
+}
+.about > div + div {
+  margin-left: 1.5rem;
 }
