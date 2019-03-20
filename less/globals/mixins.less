@@ -1,6 +1,12 @@
 // Media query
-.responsive(@maxWidth; @rules) {
+.responsive-max(@maxWidth; @rules) {
     @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.responsive-min(@minWidth; @rules) {
+    @media only screen and (min-width: @minWidth) {
         @rules();
     }
 }

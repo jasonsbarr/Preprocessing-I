@@ -10,6 +10,19 @@
     font-size: 1.2rem;
     justify-content: space-evenly;
 
+    .responsive-max(@desktop, {
+        background-color: var(--color-dark);
+    });
+
+    .responsive-max(@mobile, {
+        font-size: 1rem;
+        justify-content: center;
+
+        & *:not(span) {
+            margin: auto;
+        }
+    });
+
     &::before {
         background-color: var(--color-dark);
         background-image: url('../images/jason-barr-playing-saxophone.jpg');
@@ -45,10 +58,19 @@
                             to right,
                             fade(@grey, 25%) 50%,
                             fade(@black, 45%) 51%);
-        max-width: 750px;
+        line-height: 1.5;
+        max-width: 700px;
         .rounded();
         padding: 1em;
-        width: 50%;
+        width: 65%;
+
+        .responsive-max(@desktop, {
+            background: fade(@grey, 25%);
+        });
+
+        .responsive-max(@mobile, {
+            width: 85%;
+        });
     }
 
     &-button {

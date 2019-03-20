@@ -4397,6 +4397,9 @@ table {
 /**
  * Global styles
  */
+/**
+ * Breakpoints
+ */
 :root {
   --color-primary: #cd0000;
   --color-primary-light: #f81818;
@@ -4518,6 +4521,20 @@ button:hover {
   font-size: 1.2rem;
   justify-content: space-evenly;
 }
+@media only screen and (max-width: 64em) {
+  .hero {
+    background-color: var(--color-dark);
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .hero {
+    font-size: 1rem;
+    justify-content: center;
+  }
+  .hero *:not(span) {
+    margin: auto;
+  }
+}
 .hero::before {
   background-color: var(--color-dark);
   background-image: url('../images/jason-barr-playing-saxophone.jpg');
@@ -4546,10 +4563,21 @@ button:hover {
 }
 .hero-content {
   background-image: linear-gradient(to right, rgba(158, 158, 158, 0.25) 50%, rgba(8, 10, 10, 0.45) 51%);
-  max-width: 750px;
+  line-height: 1.5;
+  max-width: 700px;
   border-radius: 5px;
   padding: 1em;
-  width: 50%;
+  width: 65%;
+}
+@media only screen and (max-width: 64em) {
+  .hero-content {
+    background: rgba(158, 158, 158, 0.25);
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .hero-content {
+    width: 85%;
+  }
 }
 .hero-button {
   background-color: var(--color-light);
