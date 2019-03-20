@@ -4568,6 +4568,11 @@ button:hover {
 .container footer {
   margin-top: 1.5rem;
 }
+.container header,
+.container section {
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 1em;
+}
 /**
  * Component styles
  */
@@ -4666,10 +4671,8 @@ button:hover {
 }
 .header {
   align-items: center;
-  border-bottom: 1px solid var(--color-text);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1em;
 }
 @media only screen and (max-width: 64em) {
   .header {
@@ -4734,13 +4737,6 @@ button:hover {
     justify-content: center;
   }
 }
-.header .nav-item {
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.header .nav-item:hover {
-  background-color: rgba(158, 158, 158, 0.5);
-}
 .header .nav-item + .nav-item {
   margin-left: 2.5em;
 }
@@ -4750,19 +4746,21 @@ button:hover {
   }
 }
 .header .nav-link {
-  border-radius: 5px;
-  color: var(--color-text);
+  border-bottom: 2px solid #212323;
+  color: #212323;
   display: block;
   padding: 0.5em 1em;
+  transition: all 0.3s ease-in-out;
 }
 @media only screen and (max-width: 37.5em) {
   .header .nav-link {
     padding: 0.5em;
+    border: none;
   }
 }
 .header .nav-link:hover {
-  border: none;
-  color: #080a0a;
+  border-bottom-color: #7e0000;
+  color: #7e0000;
 }
 @media only screen and (max-width: 37.5em) {
   .header .nav-link .icon {

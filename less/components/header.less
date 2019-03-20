@@ -1,9 +1,7 @@
 .header {
     align-items: center;
-    border-bottom: 1px solid var(--color-text);
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1em;
 
     .responsive-max(@desktop, {
         flex-direction: column;
@@ -72,15 +70,6 @@
             });
         }
 
-        &-item {
-            .rounded();
-            .transitioned();
-
-            &:hover {
-                background-color: fade(@grey, 50%);
-            }
-        }
-
         &-item + .nav-item {
             margin-left: 2.5em;
 
@@ -90,18 +79,20 @@
         }
 
         &-link {
-            .rounded();
-            color: var(--color-text);
+            border-bottom: 2px solid @grey-darker;
+            color: @grey-darker;
             display: block;
             padding: 0.5em 1em;
+            .transitioned();
 
             .responsive-max(@mobile, {
                 padding: 0.5em;
+                border: none;
             });
 
             &:hover {
-                border: none;
-                color: @black;
+                border-bottom-color: @red-dark;
+                color: @red-dark;
             }
 
             .icon {
