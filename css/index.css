@@ -4413,6 +4413,9 @@ table {
 /**
  * Breakpoints
  */
+/**
+ * Typography
+ */
 :root {
   --color-primary: #cd0000;
   --color-primary-light: #f81818;
@@ -4451,6 +4454,7 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
   line-height: 1.2;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -4460,6 +4464,12 @@ h5,
 h6 {
   font-family: 'Overpass', sans-serif;
   font-weight: bold;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
 }
 p {
   line-height: 1.4;
@@ -4490,6 +4500,12 @@ button:hover {
   background-color: var(--color-text);
   color: var(--color-bg);
 }
+.name {
+  font-family: 'Overpass Mono', monospace;
+}
+/**
+ * Utilities
+ */
 /**
  * Font Awesome classes
  */
@@ -4505,6 +4521,7 @@ button:hover {
   line-height: 1;
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
+  margin-right: 0.2em;
 }
 .icon.fa-pull-left {
   margin-right: 0.3em;
@@ -4518,9 +4535,38 @@ button:hover {
 .icon.home::before {
   content: "\f015";
 }
+.icon.user.icon::before {
+  content: "\f007";
+}
+.icon.desktop::before {
+  content: "\f108";
+}
 .fullscreen {
   height: 100vh;
   width: 100vw;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**
+ * Layouts
+ */
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+.container header,
+.container section,
+.container footer {
+  margin-top: 1.5rem;
 }
 /**
  * Component styles
@@ -4617,4 +4663,70 @@ button:hover {
 .hero-button .icon {
   font-size: 1.5em;
   margin-right: 0.2em;
+}
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo,
+.header .logo-img {
+  height: 60px;
+}
+.header .logo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 60px;
+  min-width: 360px;
+}
+.header .logo-img {
+  margin-top: -0.75rem;
+}
+.header .logo-text {
+  font-family: 'Overpass', sans-serif;
+  font-size: 2.5rem;
+}
+.header .logo-text::before {
+  content: ">";
+  font-family: 'Overpass Mono', monospace;
+  font-size: 3rem;
+  line-height: normal;
+}
+.header .logo-text::after {
+  animation: blink 1s step-end infinite;
+  content: "|";
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+}
+.header .nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .nav-list {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.header .nav-item {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.header .nav-item:hover {
+  background-color: rgba(158, 158, 158, 0.5);
+}
+.header .nav-item + .nav-item {
+  margin-left: 2.5em;
+}
+.header .nav-link {
+  border-radius: 5px;
+  color: var(--color-text);
+  display: block;
+  padding: 0.5em 1em;
+}
+.header .nav-link:hover {
+  border: none;
+  color: #080a0a;
 }
