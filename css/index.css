@@ -4707,7 +4707,7 @@ button:hover {
   animation: sheen 1s forwards;
 }
 .hero-button::after {
-  background: linear-gradient(to bottom, #fcfcfc, rgba(252, 252, 252, 0.5) 50%, #fcfcfc);
+  background: linear-gradient(to bottom, #fcfcfc, rgba(252, 252, 252, 0.5) 50%);
   bottom: -50%;
   content: "";
   left: -50%;
