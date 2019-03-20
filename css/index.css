@@ -4622,7 +4622,7 @@ button:hover {
 }
 @media only screen and (max-width: 64em) {
   .hero {
-    background-color: var(--color-dark);
+    background: transparent;
     font-size: 1.2rem;
   }
 }
@@ -4654,6 +4654,18 @@ button:hover {
   width: 50%;
   z-index: -1;
 }
+@media only screen and (max-width: 64em) {
+  .hero::before {
+    background-position-y: 25%;
+    background-size: 100%;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .hero::before {
+    background-size: cover;
+  }
+}
 .hero h1,
 .hero h2 {
   font-family: 'Overpass Mono', monospace;
@@ -4676,7 +4688,7 @@ button:hover {
 }
 @media only screen and (max-width: 64em) {
   .hero-content {
-    background: rgba(158, 158, 158, 0.25);
+    background: rgba(8, 10, 10, 0.45);
   }
 }
 @media only screen and (max-width: 37.5em) {

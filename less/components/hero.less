@@ -11,7 +11,7 @@
     justify-content: space-evenly;
 
     .responsive-max(@desktop, {
-        background-color: var(--color-dark);
+        background: transparent;
         font-size: 1.2rem;
     });
 
@@ -41,6 +41,16 @@
         top: 0;
         width: 50%;
         z-index: -1;
+        
+        .responsive-max(@desktop, {
+            background-position-y: 25%;
+            background-size: 100%;
+            width: 100vw;
+        });
+
+        .responsive-max(@mobile, {
+            background-size: cover;
+        });
     }
 
     h1,
@@ -70,7 +80,7 @@
         width: 65%;
 
         .responsive-max(@desktop, {
-            background: fade(@grey, 25%);
+            background: fade(@black, 45%);
         });
 
         .responsive-max(@mobile, {
