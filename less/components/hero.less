@@ -7,11 +7,12 @@
     color: var(--color-light);
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     justify-content: space-evenly;
 
     .responsive-max(@desktop, {
         background-color: var(--color-dark);
+        font-size: 1.2rem;
     });
 
     .responsive-max(@mobile, {
@@ -21,6 +22,10 @@
         & *:not(span) {
             margin: auto;
         }
+    });
+
+    .responsive-min(@big-desktop, {
+        font-size: 1.8rem;
     });
 
     &::before {

@@ -4384,6 +4384,19 @@ table {
   font-weight: 400;
 }
 @font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url('../fonts/fa-solid-900.eot');
+  src: url('../fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'), url('../fonts/fa-solid-900.woff2') format('woff2'), url('../fonts/fa-solid-900.woff') format('woff'), url('../fonts/fa-solid-900.ttf') format('truetype'), url('../fonts/fa-solid-900.svg#fontawesome') format('svg');
+}
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+@font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
@@ -4491,7 +4504,7 @@ button:hover {
   text-rendering: auto;
   line-height: 1;
   font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
+  font-weight: 900;
 }
 .icon.fa-pull-left {
   margin-right: 0.3em;
@@ -4502,13 +4515,13 @@ button:hover {
 .icon.contact::before {
   content: "\f0e0";
 }
+.icon.home::before {
+  content: "\f015";
+}
 .fullscreen {
   height: 100vh;
   width: 100vw;
 }
-/**
- * Layouts
- */
 /**
  * Component styles
  */
@@ -4518,12 +4531,13 @@ button:hover {
   color: var(--color-light);
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   justify-content: space-evenly;
 }
 @media only screen and (max-width: 64em) {
   .hero {
     background-color: var(--color-dark);
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
@@ -4535,6 +4549,11 @@ button:hover {
     margin: auto;
   }
 }
+@media only screen and (min-width: 85.375em) {
+  .hero {
+    font-size: 1.8rem;
+  }
+}
 .hero::before {
   background-color: var(--color-dark);
   background-image: url('../images/jason-barr-playing-saxophone.jpg');
@@ -4542,7 +4561,7 @@ button:hover {
   background-size: cover;
   content: "";
   filter: grayscale(100%);
-  height: 100%;
+  height: 100vh;
   position: absolute;
   right: 0;
   top: 0;
