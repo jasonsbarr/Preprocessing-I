@@ -4512,6 +4512,9 @@ button:hover {
 .item-label {
   font-weight: bold;
 }
+small {
+  font-size: 0.8rem;
+}
 /**
  * Utilities
  */
@@ -5029,6 +5032,11 @@ button:hover {
 .footer > * + * {
   margin-top: 1em;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer > * + * {
+    margin-top: 0.3em;
+  }
+}
 .footer .nav {
   width: 60%;
 }
@@ -5055,10 +5063,20 @@ button:hover {
 .footer .social-item + .social-item {
   margin-left: 1em;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer .social-item + .social-item {
+    margin-left: 0.2em;
+  }
+}
 .footer .social-link {
   color: #212323;
 }
 .footer .social-link:hover {
   border: none;
   color: #5b5c5c;
+}
+@media only screen and (max-width: 37.5em) {
+  #page-footer .nav .nav-list {
+    flex-direction: column;
+  }
 }

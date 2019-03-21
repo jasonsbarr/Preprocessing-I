@@ -3,6 +3,10 @@
 
     > * + * {
         margin-top: 1em;
+
+        .responsive-max(@mobile, {
+            margin-top: .3em;
+        });
     }
 
     .nav {
@@ -31,6 +35,10 @@
 
     .social-item + .social-item {
         margin-left: 1em;
+
+        .responsive-max(@mobile, {
+            margin-left: .2em;
+        });
     }
 
     .social-link {
@@ -41,4 +49,10 @@
         border: none;
         color: @grey-dark;
     }
+}
+
+#page-footer .nav .nav-list {
+    .responsive-max(@mobile, {
+        flex-direction: column;
+    });
 }
