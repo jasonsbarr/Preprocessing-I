@@ -70,11 +70,29 @@
         content: @fa-var-user;
     }
 
-    &.education&::before {
+    &.education::before {
         content: @fa-var-graduation-cap;
     }
 
     &.desktop::before {
         content: @fa-var-desktop;
+    }
+}
+
+.iconb {
+    .fa-icon;
+    .fab;
+    margin-right: .2em;
+
+    &.github::before {
+        content: @fa-var-github;
+    }
+    
+    &.twitter::before {
+        content: @fa-var-twitter-square;
+    }
+    
+    &.medium::before {
+        content: @fa-var-medium;
     }
 }

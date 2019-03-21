@@ -4547,11 +4547,39 @@ button:hover {
 .icon.user.icon::before {
   content: "\f007";
 }
-.icon.education.icon::before {
+.icon.education::before {
   content: "\f19d";
 }
 .icon.desktop::before {
   content: "\f108";
+}
+.iconb {
+  font-weight: normal;
+  vertical-align: -0.125em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Brands';
+  margin-right: 0.2em;
+}
+.iconb.fa-pull-left {
+  margin-right: 0.3em;
+}
+.iconb.fa-pull-right {
+  margin-left: 0.3em;
+}
+.iconb.github::before {
+  content: "\f09b";
+}
+.iconb.twitter::before {
+  content: "\f081";
+}
+.iconb.medium::before {
+  content: "\f23a";
 }
 .fullscreen {
   height: 100vh;
@@ -4715,6 +4743,11 @@ button:hover {
 .education .flex-wrapper:hover .card:not(:hover) {
   filter: grayscale(100%);
   opacity: 0.4;
+}
+@media only screen and (max-width: 56.25em) {
+  .history {
+    flex-direction: column;
+  }
 }
 /**
  * Component styles
@@ -4977,4 +5010,47 @@ button:hover {
 }
 .card-item {
   margin-left: 1em;
+}
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.footer > * + * {
+  margin-top: 1em;
+}
+.footer .nav {
+  width: 60%;
+}
+.footer .nav-link {
+  color: #212323;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 1.2em;
+}
+.footer .nav-link:hover {
+  border-color: #5b5c5c;
+  border-style: dashed;
+  color: #5b5c5c;
+}
+.footer [class*="-list"] {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.footer .social-item {
+  font-size: 2em;
+}
+.footer .social-item + .social-item {
+  margin-left: 1em;
+}
+.footer .social-link {
+  color: #212323;
+}
+.footer .social-link:hover {
+  border: none;
+  color: #5b5c5c;
 }
