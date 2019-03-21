@@ -4702,6 +4702,16 @@ button:hover {
 .education-source {
   width: calc(50% - 1.5em);
 }
+@media only screen and (max-width: 56.25em) {
+  .education-source {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .education-source + .education-source {
+    margin-top: 1.5em;
+  }
+}
 .education .flex-wrapper:hover .card:not(:hover) {
   filter: grayscale(100%);
   opacity: 0.4;
