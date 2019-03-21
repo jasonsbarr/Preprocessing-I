@@ -4601,6 +4601,75 @@ button:hover {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.about {
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 56.25em) {
+  .about {
+    justify-content: center;
+  }
+}
+.about > div {
+  width: calc(50% - 1.5em);
+}
+@media only screen and (max-width: 56.25em) {
+  .about > div {
+    margin-bottom: 1.5em;
+  }
+}
+.about > div + div {
+  margin-left: 1.5em;
+}
+@media only screen and (max-width: 56.25em) {
+  .about > div + div {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .about > div {
+    flex-basis: 100%;
+  }
+}
+.about h2,
+.about h3 {
+  margin-bottom: 0.5em;
+}
+@media only screen and (max-width: 56.25em) {
+  .about h2,
+  .about h3 {
+    text-align: center;
+  }
+}
+.about-content + .about-content {
+  margin-top: 0.5em;
+}
+.about .skills {
+  font-family: 'Overpass', sans-serif;
+}
+.about .skills-heading {
+  font-size: 1.8em;
+}
+.about .skills-list {
+  border-collapse: collapse;
+}
+.about .skills-item {
+  border: 1px solid #080a0a;
+  border-collapse: collapse;
+  padding: 0.6em 1.2em;
+  transition: all 0.2s ease-in-out;
+}
+.about .skills-item:nth-child(even) {
+  background: linear-gradient(to right, rgba(198, 198, 198, 0.3), rgba(198, 198, 198, 0.3));
+}
+.about .skills-item:hover {
+  background-color: rgba(47, 154, 154, 0.15);
+  transform: scale(1.03) translateX(-0.6em);
+}
+@media only screen and (max-width: 56.25em) {
+  .about .skills-item {
+    text-align: center;
+  }
+}
 /**
  * Pages
  */
@@ -4834,66 +4903,5 @@ button:hover {
 @media only screen and (max-width: 56.25em) {
   .header .nav-link .icon {
     display: none;
-  }
-}
-.about {
-  flex-wrap: wrap;
-}
-@media only screen and (max-width: 56.25em) {
-  .about {
-    justify-content: center;
-  }
-}
-.about > div {
-  width: calc(50% - 1.5em);
-}
-@media only screen and (max-width: 56.25em) {
-  .about > div {
-    margin-bottom: 1.5em;
-  }
-}
-.about > div + div {
-  margin-left: 1.5em;
-}
-@media only screen and (max-width: 56.25em) {
-  .about > div + div {
-    margin-left: 0;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .about > div {
-    flex-basis: 100%;
-  }
-}
-.about h2,
-.about h3 {
-  margin-bottom: 0.5em;
-}
-@media only screen and (max-width: 56.25em) {
-  .about h2,
-  .about h3 {
-    text-align: center;
-  }
-}
-.about-content + .about-content {
-  margin-top: 0.5em;
-}
-.about .skills {
-  font-family: 'Overpass', sans-serif;
-}
-.about .skills-heading {
-  font-size: 1.8em;
-}
-.about .skills-list {
-  border-collapse: collapse;
-}
-.about .skills-item {
-  border: 1px solid #080a0a;
-  border-collapse: collapse;
-  padding: 0.6em 1.2em;
-}
-@media only screen and (max-width: 56.25em) {
-  .about .skills-item {
-    text-align: center;
   }
 }

@@ -53,6 +53,19 @@
             .bordered(@color: @black);
             border-collapse: collapse;
             padding: 0.6em 1.2em;
+            .transitioned(@time: .2s);
+
+            &:nth-child(even) {
+                background: linear-gradient(
+                                    to right,
+                                    fade(@grey-light, 30%),
+                                    fade(@grey-light, 30%));
+            }
+
+            &:hover {
+                background-color: fade(@blue-light, 15%);
+                transform: scale(1.03) translateX(-.6em);
+            }
 
             .responsive-max(@tablet, {
                 text-align: center;
