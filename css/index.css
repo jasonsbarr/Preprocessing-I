@@ -4748,6 +4748,14 @@ button:hover {
   .history {
     flex-direction: column;
   }
+  .history .history-header {
+    text-align: center;
+  }
+  .history .history-list {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /**
  * Component styles
