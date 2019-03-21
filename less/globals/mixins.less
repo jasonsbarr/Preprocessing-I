@@ -33,8 +33,21 @@
     transform: translate(-50%, -50%);
 }
 
-.small-caps {
-    font-variant: small-caps;
+.flex(
+  @flex-direction: row;
+  @flex-wrap: nowrap;
+  @justify-content: flex-start;
+  @align-items: stretch
+  ) {
+    align-items: @align-items;
+    display: flex;
+    flex-direction: @flex-direction;
+    flex-wrap: @flex-wrap;
+    justify-content: @justify-content;
+}
+
+.flex-centered() {
+    .flex(@justify-content: center; @align-items: center);
 }
 
 /**
