@@ -4595,11 +4595,11 @@ button:hover {
 .container header,
 .container section {
   border-bottom: 1px solid var(--color-text);
-  padding-bottom: 1em;
+  padding-bottom: 1.5rem;
 }
 .container section {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 /**
  * Pages
@@ -4734,7 +4734,6 @@ button:hover {
 }
 .header {
   align-items: center;
-  background-color: rgba(252, 252, 252, 0.9);
   display: flex;
   justify-content: space-between;
 }
