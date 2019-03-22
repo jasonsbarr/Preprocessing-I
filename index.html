@@ -3,17 +3,154 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>My Resume</title>
+  <title>Jason S. Barr</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:700|Overpass:400,600|Raleway:400,400i,700|Roboto+Slab"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
-  <h1>My Resume</h1>
+<body class="home-page">
+
+  <section class="hero fullscreen">
+    <h1 class="name hero-title">Jason S. Barr</h1>
+    <h2 class="hero-description">Software Engineer and Web Developer</h2>
+    <p class="hero-content">
+      I've been building cutting-edge websites and apps since 1996. Contact me now and I'll help you build the project of your dreams. Available for both contract and salaried work.
+    </p>
+    <button class="hero-button" href="#contact">
+      <span class="icon contact"></span> Contact Me
+    </button>
+  </section>
+
+  <div class="container">
+    <header id="top" class="header">
+      <div class="logo">
+        <img class="logo-img" src="images/saxophone-cropped.png" alt="Jason S. Barr">
+        <h2 class="name logo-text">Jason S. Barr</h2>
+      </div>
+      <nav id="primary" class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link"><span class="icon user"></span> About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><span class="icon education"></span> Education</a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><span class="icon desktop"></span> Portfolio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><span class="icon contact"></span> Contact</a></li>
+        </ul>
+      </nav>
+    </header><!-- #top -->
+
+    <section id="about" class="about">
+      <div class="about-main">
+        <h2 class="about-heading">About Jason</h2>
+        <p class="about-content">
+          I built my first website when the WWW was about the same age as my 5-year-old son. 
+        </p>
+        <p class="about-content">
+          Since then I've gone from being a dabbler to making serious code, and I've built projects of all sizes: from tiny neighborhood groups to global enterprise applications.
+        </p>
+        <p class="about-content">
+          Whether you need a simple website, an API that can serve multiple front-ends, or something even more complex, I have the experience and creative problem solving skills to help your team make it happen.
+        </p>
+      </div><!-- .about-main -->
+      <div class="skills">
+        <h3 class="skills-heading">Top Skills</h3>
+        <ul class="skills-list">
+          <li class="skills-item">UI Design (HTML and CSS)</li>
+          <li class="skills-item">Modern Workflow (Tooling and DevOps)</li>
+          <li class="skills-item">JavaScript and Node.js</li>
+          <li class="skills-item">Backend Development in PHP, Ruby, and Python</li>
+          <li class="skills-item">Database Design, Performance, and Maintenance</li>
+        </ul>
+      </div><!-- .skills -->
+    </section><!-- #about -->
+
+    <section id="education" class="education">
+      <h2 class="education-heading flex-fullwidth">Education</h2>
+      <div class="flex-wrapper">
+        <div class="education-source card">
+          <h3 class="card-title">Lambda School</h3>
+          <img src="images/lambda-school.png" alt="Lambda School" title="Lambda School logo" class="card-icon">
+          <ul class="card-list">
+            <li class="card-item"><span class="item-label">Time:</span> Feb 2019&mdash;May 2020</li>
+            <li class="card-item"><span class="item-label">Program:</span> Full Stack Web Development and Computer Science</li>
+          </ul>
+          <p class="card-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsam, eos possimus velit, nam, at perferendis hic deserunt debitis fugit culpa! Cum eum eius commodi tenetur magni, soluta laboriosam quisquam.
+          </p>
+        </div>
+        <div class="education-source card">
+          <h3 class="card-title">University of Evansville</h3>
+          <img src="images/university-of-evansville.png" alt="University of Evansville" title="University of Evansville logo" class="card-icon">
+          <ul class="card-list">
+            <li class="card-item"><span class="item-label">Time:</span> Aug 1999&mdash;May 2004</li>
+            <li class="card-item"><span class="item-label">Program:</span> Bachelor of Arts Degree</li>
+          </ul>
+          <p class="card-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea dignissimos recusandae totam, perspiciatis consequatur vero, deleniti tempora excepturi temporibus necessitatibus rerum voluptatem cum sequi nesciunt officiis doloremque, itaque laborum?
+          </p>
+        </div>
+      </div>
+    </section><!-- #education -->
+
+    <section id="history" class="history">
+      <h2 class="history-header">Work History & Experience</h2>
+      <ul class="history-list">
+        <li class="history-item">
+          Founder: Hack Evansville
+        </li>
+        <li class="history-item">
+          Lead Developer: XPERIENTRIX
+        </li>
+        <li class="history-item">
+          Digital Media Consultant: Valentine Web Services
+        </li>
+      </ul>
+    </section><!-- #history -->
+
+    <footer id="page-footer" class="footer">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <span class="iconb github"></span>&nbsp;
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <span class="iconb twitter"></span>&nbsp;
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <span class="iconb medium"></span>&nbsp;
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="legal">
+        <small>&copy; 2019 Jason S. Barr. All rights reserved.</small>
+      </p>
+    </footer>
+
+  </div><!-- .container -->
+
 </body>
 </html>

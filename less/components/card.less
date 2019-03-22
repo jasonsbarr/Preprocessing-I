@@ -1,0 +1,36 @@
+.card {
+    .bordered();
+    .flex(@flex-direction: column; @justify-content: space-around;);
+    padding: 1em;
+    .rounded();
+    .transitioned();
+
+    &:hover {
+        box-shadow: 0 3px 5px @grey;
+        filter: brightness(150%);
+        transform: scale(1.02) translateY(-3px);
+    }
+
+    & * + * {
+        margin-top: 1em;
+    }
+
+    &-title {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+    }
+
+    &-icon {
+        height: 72px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-list {
+        list-style: square;
+    }
+
+    &-item {
+        margin-left: 1em;
+    }
+}

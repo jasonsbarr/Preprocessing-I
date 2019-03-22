@@ -1,0 +1,113 @@
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .responsive-max(@desktop, {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    });
+
+    .logo,
+    .logo-img {
+        height: 3.75em;
+    }
+
+    .logo {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        line-height: 3.75em;
+        min-width: 360px;
+
+        .responsive-max(@desktop, {
+            margin-bottom: 0.5em;
+        });
+
+        .responsive-max(@tablet, {
+            font-size: 0.8rem;
+        });
+
+        &-img {
+            margin-top: -.75rem;
+        }
+
+        &-text {
+            font-family: @overp;
+            font-size: 2.5em;
+
+            &::before {
+                    content: ">";
+                    font-family: @mono;
+                    font-size: 3rem;
+                    line-height: normal;
+            }
+        }
+        
+    }
+
+    .nav {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+
+        .responsive-max(@mobile, {
+            justify-content: center;
+        });
+
+        &-list {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+            .responsive-max(@mobile, {
+                justify-content: center;
+            });
+        }
+
+        &-item {
+            .rounded();
+            .transitioned();
+
+            &:hover {
+                background-color: fade(@red-light, 15%);
+            }
+        }
+
+        &-item + .nav-item {
+            margin-left: 2.5em;
+
+            .responsive-max(@mobile, {
+                margin-left: 0;
+            });
+        }
+
+        &-link {
+            border-bottom: 2px solid @grey-darker;
+            color: @grey-darker;
+            display: block;
+            padding: 0.5em 1em;
+            .transitioned();
+
+            .responsive-max(@mobile, {
+                margin: 0 .3em;
+                padding: 0.5em;
+                // border: none;
+            });
+
+            &:hover {
+                border-bottom-color: @red-dark;
+                color: @red-dark;
+            }
+
+            .icon {
+                .responsive-max(@tablet, {
+                    display: none;
+                });
+            }
+        }
+    }
+
+}

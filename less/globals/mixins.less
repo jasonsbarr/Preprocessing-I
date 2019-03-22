@@ -1,0 +1,98 @@
+// Media query
+.responsive-max(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.responsive-min(@minWidth; @rules) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+/**
+ * Utilities
+ */
+.bordered(@size: 1px; @type: solid; @color: var(--color-text)) {
+    border: @size @type @color;
+}
+
+.transitioned(@props: all; @time: .3s; @easing: ease-in-out) {
+    transition: @props @time @easing;
+}
+
+.rounded(@radius: 5px) {
+    border-radius: @radius;
+}
+
+.abs-centered() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex(
+  @flex-direction: row;
+  @flex-wrap: nowrap;
+  @justify-content: flex-start;
+  @align-items: stretch
+  ) {
+    align-items: @align-items;
+    display: flex;
+    flex-direction: @flex-direction;
+    flex-wrap: @flex-wrap;
+    justify-content: @justify-content;
+}
+
+.flex-centered() {
+    .flex(@justify-content: center; @align-items: center);
+}
+
+/**
+ * Font Awesome classes
+ */
+.icon {
+    .fa-icon;
+    .fa;
+    margin-right: .2em;
+
+    &.contact::before {
+        content: @fa-var-envelope;
+    }
+
+    &.home::before {
+        content: @fa-var-home;
+    }
+
+    &.user&::before {
+        content: @fa-var-user;
+    }
+
+    &.education::before {
+        content: @fa-var-graduation-cap;
+    }
+
+    &.desktop::before {
+        content: @fa-var-desktop;
+    }
+}
+
+.iconb {
+    .fa-icon;
+    .fab;
+    margin-right: .2em;
+
+    &.github::before {
+        content: @fa-var-github;
+    }
+    
+    &.twitter::before {
+        content: @fa-var-twitter-square;
+    }
+    
+    &.medium::before {
+        content: @fa-var-medium;
+    }
+}
